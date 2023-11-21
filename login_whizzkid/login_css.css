@@ -1,0 +1,225 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(360_F_323124237_SfGqpttZqU2mrMm61VPSWA2tKvc95l9O.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+     width: 100%;
+     padding: 2px 100px;
+     background-color: black;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 99;
+} 
+header img{
+    height: 100px ;
+     width:150px;
+}
+.nav a
+{
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.nav a::after
+{
+    content:' ';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px; 
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+.nav a:hover::after
+{
+    transform: scaleX(1);
+}
+.nav .button-login
+{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: 0.5s;
+}
+.nav .button-login:hover
+{
+    background: white;
+    color: #162938 ;
+}
+.wrapper
+{
+    position: relative;
+    width: 400px;
+    height: 360px;
+    background:transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter:blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .form-box
+{
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.input-box
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+.remember-me
+{
+    font-size: 0.9em;
+    font-weight: 500;
+      /* margin: -15px 0 15px;   */
+    height: 15px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.btn {
+    width: 100%;
+    height: 45px;
+    background: mediumslateblue;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+.login-register
+{
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper a:-webkit-any-link {
+    color: #7EC8E3;
+}
+/* @media screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .input-box {
+        margin: 10px 0;
+        position: relative;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+} */
+
+@media screen and (max-width: 650px) {
+    /* *{
+        background-color: grey;
+    } */
+    header{
+        padding: 0;
+    }
+    header nav{
+        display: flex;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        font-size: small;
+    }
+    header img{
+        width: 20%;
+        height: 60px;
+    }
+    .nav .button-login{
+        margin: 0;
+        width: 55px;
+        height: 30px;
+        margin:  0px 10px
+    }
+    .nav a{
+        margin: 10px
+    }
+
+    .wrapper{
+        position: relative;
+        width: 90%;
+        height: 75vh;
+        background: transparent;
+        border: 2px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(20px);
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .input-box{
+        height: 60px;
+    }
+    .remember-me{
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    .btn{
+        margin-top: 20%;
+    }
+    
+    .input-box input{
+        width: 100%;
+    }
+
+}
